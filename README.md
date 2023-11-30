@@ -19,13 +19,19 @@ The model used was a fully connected neural network or a MLP. The MLP contains 8
 The hyperparameters are left as the default parameters in the NeRF-- model and the metric used to optimize NeRF-- is PSNR (Peak Signal-to-Noise Ratio).
 
 ## Results
-Given the 6 images, here is one of the images rendered by NeRF--: <br />
+An experiment was conducted which tested 2 sets of images, both capturing the Wentworth quad: one captured from the second floor of the CEIS building and the other captured from the third floor. <br />
+Given the 6 images captured from the second floor of CEIS, here is one of the images rendered by NeRF--: <br />
 ![Final Rendered Result](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/Images/Quad2ndFLResult.png) <br />
 The model ran for 10,000 epochs, which should have been a sufficient amount of time to learn the scene, but the final rendered image (and consequently the final rendered model) was incapable of rendering a high-detail and low-noise model. There could be a number of reasons for this, which I will speak about in the "Discussion" section. <br />
 The chart below shows the PSNR score of the model after 10,000 iterations: <br />
 ![First image captured](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/Images/PSNR2ndFL.png) <br />
 A good PSNR score for images typically fall within the 30-40 range. However in our instance, our model plateaued at approximately 22. Despite the low PSNR score, the rendered image produced by NeRF-- seemed to display general colors and shapes of objects within the scene. This implies that the model did learn the shape and color well, but may have oversmoothed some details in the scene. Furthermore, NeRF-- may have been unable to learn the specific colors for some of the pixels within 10,000 epochs, resulting in artifacts appearing in the final rendered model. However, additional epochs will require more time to train. With just 10,000 epochs alone, it took roughly 2 hours to complete. Because NeRF-- focuses on learning the camera parameter and not on speed, the slow training time is to be expected. In the paper published on NeRF--, the authors stated that in one of their experiments NeRF--, took roughly 30 minutes longer to train than traditional NeRF (because of the added complexity of using rays with the learned camera parameters). Once more, there could be a number of reasons for this result which we will discuss in the "Discussion" section. <br />
 Further experiments were conducted with images captured of the quad, this time from the 3rd floor. The final rendered image is as follows:
+![Final 3RD FL Render](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/Images/3RDFLRender.png) <br />
+The PSNR chart for the rendering of the quad using images captured from the 3rd floor is shown below:
+![3RD FL PSNR](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/Images/PSNR3RDFL.png) <br />
+Like the final rendered image and the PSNR score of the scene captured from the second floor, the quality is quite low (blurry) and the PSNR score seems to get stuck at around 20. Despite a lower PSNR score than the second floor one, the rendered image seemed to be much clearer and contains less overall artifacts. <br />
+Although the final rendered image of this scene contains less artifacts than the second flood rendered image, the PSNR score is still lower. It could simply be that the second floor rendered image is less blurry than the third floor, meaning that the second floor was slightly better in that regard, but worse in terms of the number of artifacts.
 
 ## Discussion
 
