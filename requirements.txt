@@ -1,0 +1,12 @@
+imageio
+imageio-ffmpeg
+matplotlib
+configargparse
+tensorboard>=2.0
+tqdm
+opencv-python
+scipy
+jupyter
+ipywidgets
+widgetsnbextension 
+pandas-profiling
