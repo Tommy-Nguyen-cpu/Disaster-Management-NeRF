@@ -6,9 +6,9 @@ NeRF-- differs from many other algorithms in that they are trained each time a n
 ![LLFF instructions for capturing images.](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/Images/LLFFDinosaur.png) <br />
 The red squares represent the area in which we have to capture the image from (the images must be formatted properly and be consistent throughout). <br />
 Given these requirements, here is the first row of images (first 3 images taken): <br />
-![First image captured]([https://github.com/Tommy-Nguyen-cpu/DisasterManagementNeRF/blob/main/20231121_123031.jpg?raw=true](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/custom_upload/20231121_123031.jpg)) <br />
-![Second image captured]([https://github.com/Tommy-Nguyen-cpu/DisasterManagementNeRF/blob/main/20231121_123033.jpg?raw=true](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/custom_upload/20231121_123033.jpg)) <br />
-![Third image captured]([https://github.com/Tommy-Nguyen-cpu/DisasterManagementNeRF/blob/main/20231121_123035.jpg?raw=true](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/custom_upload/20231121_123035.jpg)) <br />
+![First image captured](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/custom_upload/20231121_123031.jpg) <br />
+![Second image captured](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/custom_upload/20231121_123033.jpg) <br />
+![Third image captured](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/custom_upload/20231121_123035.jpg) <br />
 ## Methods
 ### Tools Used
 - NumPy, Matplotlib, and PyTorch
@@ -20,10 +20,10 @@ The hyperparameters are left as the default parameters in the NeRF-- model and t
 
 ## Results
 Given the 6 images, here is one of the images rendered by NeRF--: <br />
-![Final Rendered Result]([https://github.com/Tommy-Nguyen-cpu/DisasterManagementNeRF/blob/main/Quad2ndFLResult.png?raw=true](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/Images/Quad2ndFLResult.png)) <br />
+![Final Rendered Result](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/Images/Quad2ndFLResult.png) <br />
 The model ran for 10,000 epochs, which should have been a sufficient amount of time to learn the scene, but the final rendered image (and consequently the final rendered model) was incapable of rendering a high-detail and low-noise model. There could be a number of reasons for this, which I will speak about in the "Discussion" section. <br />
 The chart below shows the PSNR score of the model after 10,000 iterations: <br />
-![First image captured]([https://github.com/Tommy-Nguyen-cpu/DisasterManagementNeRF/blob/main/PSNR2ndFL.png?raw=true](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/Images/PSNR2ndFL.png)) <br />
+![First image captured](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/Images/PSNR2ndFL.png) <br />
 A good PSNR score for images typically fall within the 30-40 range. However in our instance, our model plateaued at approximately 22. Despite the low PSNR score, the rendered image produced by NeRF-- seemed to display general colors and shapes of objects within the scene. This implies that the model did learn the shape and color well, but may have oversmoothed some details in the scene. Once more, there could be a number of reasons for this result which we will discuss in the "Discussion" section.
 
 ## Discussion
