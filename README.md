@@ -36,8 +36,8 @@ Further experiments were conducted with images captured of the quad, this time f
 The PSNR chart for the rendering of the quad using images captured from the 3rd floor is shown below:
 ![3RD FL PSNR](https://github.com/Tommy-Nguyen-cpu/Disaster-Management-NeRF/blob/main/Images/PSNR3RDFL.png) <br />
 In contrast to the second-floor scene's PSNR score, the third-floor PSNR value appears to stabilize at a marginally lower level. Despite having a lower PSNR score compared to the second floor scene, the rendered image from the third floor seems clearer and contains fewer overall artifacts. <br />
-Although the final rendered image of the third-floor scene exhibits fewer artifacts than the one from the second floor, its PSNR score remains lower. This discrepancy might stem from the second-floor image being slightly less blurry than the third-floor one, indicating a slightly better image quality, albeit with more artifacts. <br />
-Possible causes for this stagnation are varied: lighting discrepancies on the second and third floors, an insufficient number of images, suboptimal image positioning, image resizing issue, among others. <br />
+While the final rendered image of the third-floor scene displays fewer artifacts compared to the second floor, its PSNR score surprisingly remains lower. This anomaly could arise from the second-floor rendered image being slightly less blurred, suggesting a marginally superior image quality despite the presence of additional artifacts. <br />
+Possible causes for the lower PSNR score and render quality are varied: lighting discrepancies on the second and third floors, an insufficient number of images, suboptimal image positioning, image resizing issue, among others. <br />
 Our findings suggest that NeRF--, while an intriguing alternative, currently faces limitations in terms of computational resources and training time. The model's 2-hour training duration for 6 images and 10,000 iterations is impractical for time-critical disaster management scenarios. Nevertheless, with further modifications and optimizations, NeRF-- holds potential for practical application in disaster management.
 
 ## Discussion
